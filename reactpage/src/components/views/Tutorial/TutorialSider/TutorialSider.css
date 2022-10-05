@@ -1,0 +1,13 @@
+.tutorial-sider-container{
+    width: 28%;
+    height: 80vh;
+    padding: 4% 1% 2% 2% ;
+    background-color: #f7f7f7;
+    position: fixed;
+    top: 59px;
+    right: 0;
+    overflow-y: auto; 
+}
+.tutorial-sider-container::-webkit-scrollbar {
+    display: none;
+}

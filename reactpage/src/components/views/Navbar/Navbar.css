@@ -1,0 +1,72 @@
+.Navbar-container{
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    display: flex;
+    height: 12vh;
+    background-color: #20232a;
+    color: #61DAFB;
+    z-index: 1;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    position: fixed;
+}
+.navbar-icon-container{
+    cursor: pointer;
+    width: 15vw;
+    color: #61DAFB;
+    font-weight: bold;
+    text-align: center;
+    margin-left: 8%;
+    margin-top: 2%;
+    height: 30px;
+    margin-right: 3%;
+}
+.react-icon{
+    color: #61DAFB;
+    font-size: 18px;
+}
+.navbar-icon-text{
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: #61DAFB;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.navbar-list-container{
+    display: flex;
+    padding-right: 6%;
+    height: 30px;
+    width: 40vw;
+    margin-top: 2%;
+}
+.tagnames{
+    font-style: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+    font-weight: 300;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+.navbar-search-container{
+    margin-top: 2%;
+    margin-left: 0%;
+    padding-top: 5px;
+    height: 22px;
+    width: 25%;
+}
+.icon{
+    color: #61DAFB;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+.input-field{
+    background-color: transparent;
+    border: none;
+}
+.tagnames{
+    color: #61DAFB;
+}
+

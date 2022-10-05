@@ -1,0 +1,23 @@
+.light-colored-paragraph{
+    color: grey;
+}
+p{
+    line-height: 1.7;
+}
+h1{
+font-size: 46px;
+}
+strong{
+    font-weight: 1200;
+    font-size: 14px;
+}
+li{
+
+    width: 85%;
+}
+li span{
+    line-height: 1;
+    font-size: 13px;
+    font-weight: 400;
+   
+}

@@ -1,0 +1,10 @@
+.Tips-container{
+    background-color: rgba(255,229,100,0.3);
+    border-left-color: #ffe564;
+    border-left-width: 12px;
+    border-left-style: solid;
+    padding: 15px 20px 5px 20px;
+}
+h3{
+    display: inline;
+}
