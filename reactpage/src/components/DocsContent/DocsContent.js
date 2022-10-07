@@ -1,10 +1,10 @@
 import "./DocsContent.css";
-import { DocsData } from "../../../../Fixtures/Index";
-import TitleFooter from "../../TitleFooter/TitleFooter";
-import Footer from "../../TitleFooter/Footer/Footer";
-import Tips from "../../Tips/Tips";
-import Like from "../../Like/Like";
-import DataManage from "../../../DataManage/DataManage";
+import { DocsData } from "../../Fixtures/Index";
+import TitleFooter from "../views/TitleFooter/TitleFooter";
+import Footer from "../views/TitleFooter/Footer/Footer";
+import Tips from "../Tips/Tips";
+import Like from "../Like/Like";
+import DataManage from "../DataManage/DataManage";
 const DocsContent = () => {
   return (
     <div className="Docs-Main-container">

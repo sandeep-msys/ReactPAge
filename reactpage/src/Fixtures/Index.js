@@ -2,11 +2,19 @@ export const DocsData = [
   {
     id: 0,
     h1: "Getting Started",
-    pl: ["This page is an overview of the React documentation and related resources."],
+    pl: [
+      "This page is an overview of the React documentation and related resources.",
+    ],
     p1: "React is a JavaScript library for building user interfaces. Learn what React is all about on our homepage or in the tutorial.",
     hr: ".",
-    list: ["Try React","Learn React","Staying Informed","Versioned Documentation","Something Missing?",],
-    s:['React']
+    list: [
+      "Try React",
+      "Learn React",
+      "Staying Informed",
+      "Versioned Documentation",
+      "Something Missing?",
+    ],
+    s: ["React"],
   },
   {
     id: 1,
@@ -40,7 +48,10 @@ export const DocsData = [
     id: 5,
     h1: "Learn React",
     p: "People come to React from different backgrounds and with different learning styles. Whether you prefer a more theoretical or a practical approach, we hope you’ll find this section helpful.",
-    list:["If you prefer to learn by doing, start with our practical tutorial.","If you prefer to learn concepts step by step, start with our guide to main concepts."],
+    list: [
+      "If you prefer to learn by doing, start with our practical tutorial.",
+      "If you prefer to learn concepts step by step, start with our guide to main concepts.",
+    ],
     p1: "Like any unfamiliar technology, React does have a learning curve. With practice and some patience, you will get the hang of it.",
     s: ["learn by doing", "learn concepts step by step"],
     a: ["practical tutorial", "guide to main concepts"],
@@ -69,6 +80,11 @@ export const DocsData = [
     p: "The React documentation assumes some familiarity with programming in the JavaScript language. You don’t have to be an expert, but it’s harder to learn both React and JavaScript at the same time.",
     p1: "We recommend going through this JavaScript overview to check your knowledge level. It will take you between 30 minutes and an hour but you will feel more confident learning React.",
     a: ["this JavaScript overview"],
+  },
+  {
+    tiptitle: "Tip",
+    tipparagraph:
+      "Whenever you get confused by something in JavaScript, MDN and javascript.info are great websites to check. There are also community support forums where you can ask for help.",
   },
   {
     id: 10,
@@ -127,7 +143,7 @@ export const DocsData = [
   },
   {
     id: 17,
-    h1: "Staying Informed",
+    h2: "Staying Informed",
     p: "The React blog is the official source for the updates from the React team. Anything important, including release notes or deprecation notices, will be posted there first.",
     p1: "You can also follow the @reactjs account on Twitter, but you won’t miss anything essential if you only read the blog.",
     p2: "Not every React release deserves its own blog post, but you can find a detailed changelog for every release in the CHANGELOG.md file in the React repository, as well as on the Releases page.",
@@ -141,15 +157,15 @@ export const DocsData = [
   },
   {
     id: 18,
-    h1: "Versioned Documentation",
+    h2: "Versioned Documentation",
     p: "This documentation always reflects the latest stable version of React. Since React 16, you can find older versions of the documentation on a separate page. Note that documentation for past versions is snapshotted at the time of the release, and isn’t being continuously updated.",
     a: ["separate page"],
     hr: ".",
   },
-  
+
   {
     id: 19,
-    h1: "Something Missing?",
+    h2: "Something Missing?",
     p: "If something is missing in the documentation or if you found some part confusing, please file an issue for the documentation repository with your suggestions for improvement, or tweet at the @reactjs account. We love hearing from you!",
     anchor: [
       "file an issue for the documentation repository",
@@ -275,33 +291,33 @@ export const BlogData = [
     p: "We typically have a number of projects being worked on at any time, ranging from the more experimental to the clearly defined. Looking ahead, we’d like to start regularly sharing more about what we’ve been working on with the community across these projects.",
     p1: "To set expectations, this is not a roadmap with clear timelines. Many of these projects are under active research and are difficult to put concrete ship dates on. They may possibly never even ship in their current iteration depending on what we learn. Instead, we want to share with you the problem spaces we’re actively thinking about, and what we’ve learned so far.",
     hr: ".",
-},
+  },
   {
     h2: "Server Components",
     p: "We announced an experimental demo of React Server Components (RSC) in December 2020. Since then we’ve been finishing up its dependencies in React 18, and working on changes inspired by experimental feedback.",
     p1: "In particular, we’re abandoning the idea of having forked I/O libraries (eg react-fetch), and instead adopting an async/await model for better compatibility. This doesn’t technically block RSC’s release because you can also use routers for data fetching. Another change is that we’re also moving away from the file extension approach in favor of annotating boundaries.",
     p2: "We’re working together with Vercel and Shopify to unify bundler support for shared semantics in both Webpack and Vite. Before launch, we want to make sure that the semantics of RSCs are the same across the whole React ecosystem. This is the major blocker for reaching stable.",
-    hr: ".",  
-},
+    hr: ".",
+  },
   {
     h2: "Asset Loading",
     p: "Currently, assets like scripts, external styles, fonts, and images are typically preloaded and loaded using external systems. This can make it tricky to coordinate across new environments like streaming, server components, and more. We’re looking at adding APIs to preload and load deduplicated external assets through React APIs that work in all React environments.",
     p1: "We’re also looking at having these support Suspense so you can have images, CSS, and fonts that block display until they’re loaded but don’t block streaming and concurrent rendering. This can help avoid “popcorning“ as the visuals pop and layout shifts.",
-    hr: ".",  
-},
+    hr: ".",
+  },
 
   {
     h2: "Static Server Rendering Optimizations",
     p: "Static Site Generation (SSG) and Incremental Static Regeneration (ISR) are great ways to get performance for cacheable pages, but we think we can add features to improve performance of dynamic Server Side Rendering (SSR) – especially when most but not all of the content is cacheable. We’re exploring ways to optimize server rendering utilizing compilation and static passes.",
-    hr: ".",  
-},
+    hr: ".",
+  },
   {
     h2: "React Optimizing Compiler",
     p: "We gave an early preview of React Forget at React Conf 2021. It’s a compiler that automatically generates the equivalent of useMemo and useCallback calls to minimize the cost of re-rendering, while retaining React’s programming model.",
     p1: "Recently, we finished a rewrite of the compiler to make it more reliable and capable. This new architecture allows us to analyze and memoize more complex patterns such as the use of local mutations, and opens up many new compile-time optimization opportunities beyond just being on par with memoization hooks.",
     p2: "We’re also working on a playground for exploring many aspects of the compiler. While the goal of the playground is to make development of the compiler easier, we think that it will make it easier to try it out and build intuition for what the compiler does. It reveals various insights into how it works under the hood, and live renders the compiler’s outputs as you type. This will be shipped together with the compiler when it’s released.",
-    hr: ".",  
-},
+    hr: ".",
+  },
 
   {
     h2: "Offscreen",
@@ -309,21 +325,22 @@ export const BlogData = [
     p1: "The other option is to keep the component mounted and toggle the appearance visually using CSS. This preserves the state of your UI, but it comes at a performance cost, because React must keep rendering the hidden component and all of its children whenever it receives new updates.",
     p2: "Offscreen introduces a third option: hide the UI visually, but deprioritize its content. The idea is similar in spirit to the content-visibility CSS property: when content is hidden, it doesn’t need to stay in sync with the rest of the UI. React can defer the rendering work until the rest of the app is idle, or until the content becomes visible again.",
     p3: "Offscreen is a low level capability that unlocks high level features. Similar to React’s other concurrent features like startTransition, in most cases you won’t interact with the Offscreen API directly, but instead via an opinionated framework to implement patterns like:",
-    list:["Instant transitions. Some routing frameworks already prefetch data to speed up subsequent navigations, like when hovering over a link. With Offscreen, they’ll also be able to prerender the next screen in the background.",
-    "Reusable state. Similarly, when navigating between routes or tabs, you can use Offscreen to preserve the state of the previous screen so you can switch back and pick up where you left off.",
-    "Virtualized list rendering. When displaying large lists of items, virtualized list frameworks will prerender more rows than are currently visible. You can use Offscreen to prerender the hidden rows at a lower priority than the visible items in the list.",
-    "Backgrounded content. We’re also exploring a related feature for deprioritizing content in the background without hiding it, like when displaying a modal overlay.",
-  ],
-    hr: ".",  
-},
+    list: [
+      "Instant transitions. Some routing frameworks already prefetch data to speed up subsequent navigations, like when hovering over a link. With Offscreen, they’ll also be able to prerender the next screen in the background.",
+      "Reusable state. Similarly, when navigating between routes or tabs, you can use Offscreen to preserve the state of the previous screen so you can switch back and pick up where you left off.",
+      "Virtualized list rendering. When displaying large lists of items, virtualized list frameworks will prerender more rows than are currently visible. You can use Offscreen to prerender the hidden rows at a lower priority than the visible items in the list.",
+      "Backgrounded content. We’re also exploring a related feature for deprioritizing content in the background without hiding it, like when displaying a modal overlay.",
+    ],
+    hr: ".",
+  },
   {
     h2: "Transition Tracing",
     p: "Currently, React has two profiling tools. The original Profiler shows an overview of all the commits in a profiling session. For each commit, it also shows all components that rendered and the amount of time it took for them to render. We also have a beta version of a Timeline Profiler introduced in React 18 that shows when components schedule updates and when React works on these updates. Both of these profilers help developers identify performance problems in their code.",
     p1: "We’ve realized that developers don’t find knowing about individual slow commits or components out of context that useful. It’s more useful to know about what actually causes the slow commits. And that developers want to be able to track specific interactions (eg a button click, an initial load, or a page navigation) to watch for performance regressions and to understand why an interaction was slow and how to fix it.",
     p2: "We previously tried to solve this issue by creating an Interaction Tracing API, but it had some fundamental design flaws that reduced the accuracy of tracking why an interaction was slow and sometimes resulted in interactions never ending. We ended up removing this API because of these issues.",
     p3: "We are working on a new version for the Interaction Tracing API (tentatively called Transition Tracing because it is initiated via startTransition) that solves these problems.",
-    hr: ".",  
-},
+    hr: ".",
+  },
 
   {
     h2: "New React Docs",
@@ -356,11 +373,16 @@ export const TutorialData = [
   {
     h2: "Before We Start the Tutorial",
     p: "We will build a small game during this tutorial. You might be tempted to skip it because you’re not building games — but give it a chance. The techniques you’ll learn in the tutorial are fundamental to building any React app, and mastering it will give you a deep understanding of React.",
+    tiptitle: "Tips",
+    tipparagraph:
+      "This tutorial is designed for people who prefer to learn by doing. If you prefer learning concepts from the ground up, check out our step-by-step guide. You might find this tutorial and the guide complementary to each other.",
     p1: "The tutorial is divided into several sections:",
-    list:["Setup for the Tutorial will give you a starting point to follow the tutorial.",
-    "Overview will teach you the fundamentals of React: components, props, and state.",
-    "Completing the Game will teach you the most common techniques in React development.",
-    "Adding Time Travel will give you a deeper insight into the unique strengths of React.",],
+    list: [
+      "Setup for the Tutorial will give you a starting point to follow the tutorial.",
+      "Overview will teach you the fundamentals of React: components, props, and state.",
+      "Completing the Game will teach you the most common techniques in React development.",
+      "Adding Time Travel will give you a deeper insight into the unique strengths of React.",
+    ],
     p2: "You don’t have to complete all of the sections at once to get the value out of this tutorial. Try to get as far as you can — even if it’s one or two sections.",
   },
   {
@@ -374,8 +396,8 @@ export const TutorialData = [
     h2: "Prerequisites",
     p: "We’ll assume that you have some familiarity with HTML and JavaScript, but you should be able to follow along even if you’re coming from a different programming language. We’ll also assume that you’re familiar with programming concepts like functions, objects, arrays, and to a lesser extent, classes.",
     p1: "If you need to review JavaScript, we recommend reading this guide. Note that we’re also using some features from ES6 — a recent version of JavaScript. In this tutorial, we’re using arrow functions, classes, let, and const statements. You can use the Babel REPL to check what ES6 code compiles to.",
-    hr: ".",  
-},
+    hr: ".",
+  },
   {
     h1: "Setup for the Tutorial",
     p: "There are two ways to complete this tutorial: you can either write the code in your browser, or you can set up a local development environment on your computer.",
@@ -393,8 +415,8 @@ export const TutorialData = [
   {
     h2: "Help, I’m Stuck!",
     p: "If you get stuck, check out the community support resources. In particular, Reactiflux Chat is a great way to get help quickly. If you don’t receive an answer, or if you remain stuck, please file an issue, and we’ll help you out.",
-    hr: ".",  
-},
+    hr: ".",
+  },
   {
     h2: "Overview",
     p: "Now that you’re set up, let’s get an overview of React!",
@@ -403,6 +425,24 @@ export const TutorialData = [
     h2: "What Is React?",
     p: "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.",
     p1: "React has a few different kinds of components, but we’ll start with React.Component subclasses:",
+    code : [
+      'class ShoppingList extends React.Component {',
+      '   render() {',
+      '       return (',
+      '            <div className="shopping-list">',
+      '                <h1>Shopping List for {this.props.name}</h1>',
+      '                <ul>',
+      '                <li>Instagram</li>',
+      '                <li>WhatsApp</li>',
+      '                <li>Oculus</li>',
+      '                </ul>',
+      '            </div>',
+      '        );',
+      '    }',
+      '}',
+
+      '// Example usage: <ShoppingList name="Mark" />',
+  ],  
   },
   {
     p: "We’ll get to the funny XML-like tags soon. We use components to tell React what we want to see on the screen. When our data changes, React will efficiently update and re-render our components.",
@@ -420,7 +460,7 @@ export const TutorialData = [
     p: "If you’re going to work on the tutorial in your browser, open this code in a new tab: Starter Code. If you’re going to work on the tutorial locally, instead open src/index.js in your project folder (you have already touched this file during the setup).",
     p1: "This Starter Code is the base of what we’re building. We’ve provided the CSS styling so that you only need to focus on learning React and programming the tic-tac-toe game.",
     p2: "By inspecting the code, you’ll notice that we have three React components:",
-    list: ["Square","Board","Game"],
+    list: ["Square", "Board", "Game"],
     p3: "The Square component renders a single <button> and the Board renders 9 squares. The Game component renders a board with placeholder values which we’ll modify later. There are currently no interactive components.",
   },
   {
@@ -437,16 +477,23 @@ export const TutorialData = [
     h2: "Making an Interactive Component",
     p: "Let’s fill the Square component with an “X” when we click it. First, change the button tag that is returned from the Square component’s render() function to this:",
     p1: "If you click on a Square now, you should see ‘click’ in your browser’s devtools console.",
+    tiptitle: "Note",
+    tipparagraph:
+      'To save typing and avoid the confusing behavior of this, we will use the arrow function syntax for event handlers here and further below Notice how with onClick={() => console.log("click")}, we’re passing a function as the onClick prop. React will only call this function after a click. Forgetting () => and writing onClick={console.log("click")} is a common mistake, and would fire every time the component re-renders.',
     p2: "As a next step, we want the Square component to “remember” that it got clicked, and fill it with an “X” mark. To “remember” things, components use state.React components can have state by setting this.state in their constructors. this.state should be considered as private to a React component that it’s defined in. Let’s store the current value of the Square in this.state, and change it when the Square is clicked.",
     p3: "First, we’ll add a constructor to the class to initialize the state:",
     p4: "Now we’ll change the Square’s render method to display the current state’s value when clicked:",
-    list:[
-"Replace this.props.value with this.state.value inside the <button> tag.",
+    list: [
+      "Replace this.props.value with this.state.value inside the <button> tag.",
       "Replace the onClick={...} event handler with onClick={() => this.setState({value: 'X'})}.",
-      "Put the className and onClick props on separate lines for better readability."],
+      "Put the className and onClick props on separate lines for better readability.",
+    ],
     p5: "After these changes, the <button> tag that is returned by the Square’s render method looks like this:",
   },
   {
+    tiptitle: "Note",
+    tipparagraph:
+      "In JavaScript classes, you need to always call super when defining the constructor of a subclass. All React component classes that have a constructor should start with a super(props) call.",
     p: "By calling this.setState from an onClick handler in the Square’s render method, we tell React to re-render that Square whenever its <button> is clicked. After the update, the Square’s this.state.value will be 'X', so we’ll see the X on the game board. If you click on any Square, an X should show up.When you call setState in a component, React automatically updates the child components inside of it too.",
   },
   {
@@ -454,18 +501,18 @@ export const TutorialData = [
     p: "The React Devtools extension for Chrome and Firefox lets you inspect a React component tree with your browser’s developer tools.",
     p1: "The React DevTools let you check the props and the state of your React components.After installing React DevTools, you can right-click on any element on the page, click “Inspect” to open the developer tools, and the React tabs (“⚛️ Components” and “⚛️ Profiler”) will appear as the last tabs to the right. Use “⚛️ Components” to inspect the component tree.",
     p2: "However, note there are a few extra steps to get it working with CodePen:",
-    list:[
+    list: [
       "Log in or register and confirm your email (required to prevent spam).",
-"Click the “Fork” button.",
-"Click “Change View” and then choose “Debug mode”.",
-"In the new tab that opens, the devtools should now have a React tab."],
-      
+      "Click the “Fork” button.",
+      "Click “Change View” and then choose “Debug mode”.",
+      "In the new tab that opens, the devtools should now have a React tab.",
+    ],
   },
   {
     h1: "Completing the Game",
     p: "We now have the basic building blocks for our tic-tac-toe game. To have a complete game, we now need to alternate placing “X”s and “O”s on the board, and we need a way to determine a winner.",
-    hr: ".",  
-},
+    hr: ".",
+  },
   {
     h2: "Lifting State Up",
     p: "Currently, each Square component maintains the game’s state. To check for a winner, we’ll maintain the value of each of the 9 squares in one location.We may think that Board should just ask each Square for the Square’s state. Although this approach is possible in React, we discourage it because the code becomes difficult to understand, susceptible to bugs, and hard to refactor. Instead, the best approach is to store the game’s state in the parent Board component instead of in each Square. The Board component can tell each Square what to display by passing a prop, just like we did when we passed a number to each Square.",
@@ -482,26 +529,34 @@ export const TutorialData = [
     p3: "Next, we need to change what happens when a Square is clicked. The Board component now maintains which squares are filled. We need to create a way for the Square to update the Board’s state. Since state is considered to be private to a component that defines it, we cannot update the Board’s state directly from Square.",
     p4: "Instead, we’ll pass down a function from the Board to the Square, and we’ll have Square call that function when a square is clicked. We’ll change the renderSquare method in Board to:",
     p5: "Now we’re passing down two props from Board to Square: value and onClick. The onClick prop is a function that Square can call when clicked. We’ll make the following changes to Square:",
-    list:[
+    tiptitle: "Note",
+    tipparagraph:
+      "We split the returned element into multiple lines for readability, and added parentheses so that JavaScript doesn’t insert a semicolon after return and break our code.",
+    list: [
       "Replace this.state.value with this.props.value in Square’s render method",
 
       "Replace this.setState() with this.props.onClick() in Square’s render method",
 
-      "Delete the constructor from Square because Square no longer keeps track of the game’s state"],
+      "Delete the constructor from Square because Square no longer keeps track of the game’s state",
+    ],
   },
   {
     p: "After these changes, the Square component looks like this:",
     p1: "When a Square is clicked, the onClick function provided by the Board is called. Here’s a review of how this is achieved:",
-    list:[
+    list: [
       "The onClick prop on the built-in DOM <button> component tells React to set up a click event listener.",
-   
+
       "When the button is clicked, React will call the onClick event handler that is defined in Square’s render() method.",
-    
+
       "This event handler calls this.props.onClick(). The Square’s onClick prop was specified by the Board.",
-    
+
       "Since the Board passed onClick={() => this.handleClick(i)} to Square, the Square calls the Board’s handleClick(i) when clicked.",
-    
-      "We have not defined the handleClick() method yet, so our code crashes. If you click a square now, you should see a red error screen saying something like “this.handleClick is not a function”."],
+
+      "We have not defined the handleClick() method yet, so our code crashes. If you click a square now, you should see a red error screen saying something like “this.handleClick is not a function”.",
+    ],
+    tiptitle: "Note",
+    tipparagraph:
+      "The DOM <button> element’s onClick attribute has a special meaning to React because it is a built-in component. For custom components like Square, the naming is up to you. We could give any name to the Square’s onClick prop or Board’s handleClick method, and the code would work the same. In React, it’s conventional to use on[Event] names for props which represent events and handle[Event] for the methods which handle the events.",
     p2: "When we try to click a Square, we should get an error because we haven’t defined handleClick yet. We’ll now add handleClick to the Board class:",
     p3: "After these changes, we’re again able to click on the Squares to fill them, the same as we had before. However, now the state is stored in the Board component instead of the individual Square components. When the Board’s state changes, the Square components re-render automatically. Keeping the state of all squares in the Board component will allow it to determine the winner in the future.",
     p4: "Since the Square components no longer maintain state, the Square components receive values from the Board component and inform the Board component when they’re clicked. In React terms, the Square components are now controlled components. The Board has full control over them.",
@@ -511,23 +566,25 @@ export const TutorialData = [
     h2: "Why Immutability Is Important",
     p: "In the previous code example, we suggested that you create a copy of the squares array using the slice() method instead of modifying the existing array. We’ll now discuss immutability and why immutability is important to learn.",
     p1: "There are generally two approaches to changing data. The first approach is to mutate the data by directly changing the data’s values. The second approach is to replace the data with a new copy which has the desired changes.",
-    pl:'Data Change with Mutation',
-    pl1:'Data Change without Mutation',
-    pl2:'Complex Features Become Simple',
-    pl3:'Detecting Changes',
-    pl5:'Determining When to Re-Render in React',
+    pl: "Data Change with Mutation",
+    pl1: "Data Change without Mutation",
+    pl2: "Complex Features Become Simple",
+    pl3: "Detecting Changes",
+    pl5: "Determining When to Re-Render in React",
     p2: "The end result is the same but by not mutating (or changing the underlying data) directly, we gain several benefits described below.",
     p3: "Immutability makes complex features much easier to implement. Later in this tutorial, we will implement a “time travel” feature that allows us to review the tic-tac-toe game’s history and “jump back” to previous moves. This functionality isn’t specific to games — an ability to undo and redo certain actions is a common requirement in applications. Avoiding direct data mutation lets us keep previous versions of the game’s history intact, and reuse them later.",
     p4: "Detecting changes in mutable objects is difficult because they are modified directly. This detection requires the mutable object to be compared to previous copies of itself and the entire object tree to be traversed.Detecting changes in immutable objects is considerably easier. If the immutable object that is being referenced is different than the previous one, then the object has changed.",
     p5: "The main benefit of immutability is that it helps you build pure components in React. Immutable data can easily determine if changes have been made, which helps to determine when a component requires re-rendering.You can learn more about shouldComponentUpdate() and how you can build pure components by reading Optimizing Performance.",
   },
   {
-    
     h2: "Function Components",
     p: "We’ll now change the Square to be a function component.",
     p1: "In React, function components are a simpler way to write components that only contain a render method and don’t have their own state. Instead of defining a class which extends React.Component, we can write a function that takes props as input and returns what should be rendered. Function components are less tedious to write than classes, and many components can be expressed this way.",
     p2: "Replace the Square class with this function:",
     p3: "We have changed this.props to props both times it appears.",
+    tiptitle: "Note",
+    tipparagraph:
+      "When we modified the Square to be a function component, we also changed onClick={() => this.props.onClick()} to a shorter onClick={props.onClick} (note the lack of parentheses on both sides).",
   },
   {
     h2: "Taking Turns",
@@ -564,11 +621,13 @@ export const TutorialData = [
     p1: "Placing the history state into the Game component lets us remove the squares state from its child Board component. Just like we “lifted state up” from the Square component into the Board component, we are now lifting it up from the Board into the top-level Game component. This gives the Game component full control over the Board’s data, and lets it instruct the Board to render previous turns from the history.",
     p2: "First, we’ll set up the initial state for the Game component within its constructor:",
     p3: "Next, we’ll have the Board component receive squares and onClick props from the Game component. Since we now have a single click handler in Board for many Squares, we’ll need to pass the location of each Square into the onClick handler to indicate which Square was clicked. Here are the required steps to transform the Board component:",
-    list:[ "Delete the constructor in Board.",
-    
+    list: [
+      "Delete the constructor in Board.",
+
       "Replace this.state.squares[i] with this.props.squares[i] in Board’s renderSquare.",
-    
-      "Replace this.handleClick(i) with this.props.onClick(i) in Board’s renderSquare."],
+
+      "Replace this.handleClick(i) with this.props.onClick(i) in Board’s renderSquare.",
+    ],
     p4: "The Board component now looks like this:",
   },
   {
@@ -576,6 +635,9 @@ export const TutorialData = [
     p1: "Since the Game component is now rendering the game’s status, we can remove the corresponding code from the Board’s render method. After refactoring, the Board’s render function looks like this:",
     p2: "Finally, we need to move the handleClick method from the Board component to the Game component. We also need to modify handleClick because the Game component’s state is structured differently. Within the Game’s handleClick method, we concatenate new history entries onto history.",
     p3: "At this point, the Board component only needs the renderSquare and render methods. The game’s state and the handleClick method should be in the Game component.",
+    tiptitle: "Note",
+    tipparagraph:
+      "Unlike the array push() method you might be more familiar with, the concat() method doesn’t mutate the original array, so we prefer it.",
   },
   {
     h2: "Showing the Past Moves",
@@ -589,6 +651,9 @@ export const TutorialData = [
     p: "As we iterate through history array, step variable refers to the current history element value, and move refers to the current history element index. We are only interested in move here, hence step is not getting assigned to anything.",
     p1: "For each move in the tic-tac-toe game’s history, we create a list item <li> which contains a button <button>. The button has a onClick handler which calls a method called this.jumpTo(). We haven’t implemented the jumpTo() method yet. For now, we should see a list of the moves that have occurred in the game and a warning in the developer tools console that says:",
     p2: "Let’s discuss what the above warning means.",
+    tiptitle: "Warning",
+    tipparagraph:
+      "Unlike the array push() method you might be more familiar with, the concat() method doesn’t mutate the original array, so we prefer it.",
   },
   {
     h2: "Picking a Key",
@@ -624,25 +689,28 @@ export const TutorialData = [
   {
     h2: "Wrapping Up",
     p1: "Congratulations! You’ve created a tic-tac-toe game that:",
-    list: ["Lets you play tic-tac-toe,",
-    "Indicates when a player has won the game,",
-   "Stores a game’s history as a game progresses,",
-  
-      "Allows players to review a game’s history and see previous versions of a game’s board."],
+    list: [
+      "Lets you play tic-tac-toe,",
+      "Indicates when a player has won the game,",
+      "Stores a game’s history as a game progresses,",
+
+      "Allows players to review a game’s history and see previous versions of a game’s board.",
+    ],
     p: "Nice work! We hope you now feel like you have a decent grasp of how React works.",
   },
   {
     p1: "If you have extra time or want to practice your new React skills, here are some ideas for improvements that you could make to the tic-tac-toe game which are listed in order of increasing difficulty:",
-    list:[
+    list: [
       "Display the location for each move in the format (col, row) in the move history list.",
-    "Bold the currently selected item in the move list.",
-    
+      "Bold the currently selected item in the move list.",
+
       "Rewrite Board to use two loops to make the squares instead of hardcoding them.",
-    
+
       "Add a toggle button that lets you sort the moves in either ascending or descending order.",
- 
+
       "When someone wins, highlight the three squares that caused the win.",
-     "When no one wins, display a message about the result being a draw."],
+      "When no one wins, display a message about the result being a draw.",
+    ],
     p: "Throughout this tutorial, we touched on React concepts including elements, components, props, and state. For a more detailed explanation of each of these topics, check out the rest of the documentation. To learn more about defining components, check out the React.Component API reference.",
   },
 ];
@@ -697,23 +765,24 @@ export const CommunityData = [
     p: "React has a community of millions of developers.",
     p1: "On this page we’ve listed some React-related communities that you can be a part of; see the other pages in this section for additional online and in-person learning materials.",
     p2: "Before participating in React’s communities, please read our Code of Conduct. We have adopted the Contributor Covenant and we expect that all community members adhere to the guidelines within.",
-    hr: ".",  
-},
+    hr: ".",
+  },
   {
     h2: "Stack Overflow",
     p: "Stack Overflow is a popular forum to ask code-level questions or if you’re stuck with a specific error. Read through the existing questions tagged with reactjs or ask your own!",
     hr: ".",
-},
+  },
   {
     h2: "Popular Discussion Forums",
     p: "There are many online forums which are a great place for discussion about best practices and application architecture as well as the future of React. If you have an answerable code-level question, Stack Overflow is usually a better fit.",
     p1: "Each community consists of many thousands of React users.",
-    list:[ "DEV’s React community",
-    "Hashnode’s React community",
-    "Reactiflux online chat",
-     "Reddit’s React community"],
-     
-},
+    list: [
+      "DEV’s React community",
+      "Hashnode’s React community",
+      "Reactiflux online chat",
+      "Reddit’s React community",
+    ],
+  },
   {
     h1: "News",
     p: "For the latest news about React, follow @reactjs on Twitter and the official React blog on this website.",
@@ -737,9 +806,6 @@ export const CommunitySiderData = [
     ],
   },
 ];
-
-
-
 
 export const footerDoc = [
   {

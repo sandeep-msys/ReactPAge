@@ -1,10 +1,10 @@
-import "../../Docs/DocsContent/DocsContent.css";
-import Footer from "../../TitleFooter/Footer/Footer";
-import { BlogData } from "../../../../Fixtures/Index";
-import TitleFooter from "../../TitleFooter/TitleFooter";
-import Tips from "../../Tips/Tips";
-import Like from "../../Like/Like";
-import DataManage from "../../../DataManage/DataManage";
+import '../DocsContent/DocsContent.css'
+import Footer from "../views/TitleFooter/Footer/Footer";
+import { BlogData } from "../../Fixtures/Index";
+import TitleFooter from "../views/TitleFooter/TitleFooter";
+import Tips from "../Tips/Tips";
+import Like from "../Like/Like";
+import DataManage from "../DataManage/DataManage";
 import './BlogContent.css'
 const BlogContent = () => {
   return (

@@ -1,5 +1,5 @@
 import './App.css';
-import {Navbar} from "./components/views/Navbar/Navbar.js";
+import {Navbar} from './components/Navbar/Navbar'
 import Tutorial from './components/views/Tutorial/Tutorial';
 import Docs from './components/views/Docs/Docs'
 import Blog from './components/views/Blog/Blog';

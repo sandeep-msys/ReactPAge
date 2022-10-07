@@ -1,5 +1,5 @@
-import CommunityContent from "./CommunityContent/CommunityContent";
-import CommunitySider from "./CommunitySider/CommunitySider";
+import CommunityContent from '../../CommunityContent/CommunityContent'
+import CommunitySider from '../../CommunitySider/CommunitySider'
 import "./Community.css";
 const Community = () => {
   return (

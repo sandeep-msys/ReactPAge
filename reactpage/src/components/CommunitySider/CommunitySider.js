@@ -1,6 +1,6 @@
-import { CommunitySiderData } from "../../../../Fixtures/Index";
+import { CommunitySiderData } from "../../Fixtures/Index";
 import "./CommunitySider.css";
-import Accordion from "../../../../Accordion/Accordion";
+import Accordion from "../../Accordion/Accordion";
 
 const DocsSider = () => {
   return (

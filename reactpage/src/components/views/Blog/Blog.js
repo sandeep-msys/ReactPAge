@@ -1,6 +1,6 @@
 import './Blog.css';
-import BlogContent from './BlogContent/BlogContent';
-import BlogSider from './BlogSider/BlogSider'
+import BlogContent from '../../BlogContent/BlogContent'
+import BlogSider from '../../BlogSider/BlogSider'
 const Blog = () => {
     return ( 
         <div className='Blog-container'>

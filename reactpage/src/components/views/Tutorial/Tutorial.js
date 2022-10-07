@@ -1,5 +1,5 @@
-import TutorialContent from "./TutorialContent/TutorialContent";
-import TutorialSider from "./TutorialSider/TutorialSider";
+import TutorialContent from "../../TutorialContent/TutorialContent";
+import TutorialSider from "../../TutorialSider/TutorialSider";
 import "./Tutorial.css";
 const Tutorial = () => {
   return (
