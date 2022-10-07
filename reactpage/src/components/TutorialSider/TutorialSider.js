@@ -1,6 +1,6 @@
 import "./TutorialSider.css";
 import { TutorialSiderData } from "../../Fixtures/Index";
-import Accordion from "../../Accordion/Accordion";
+import Accordion from "../Accordion/Accordion";
 
 const TutorialSider = () => {
   return (
