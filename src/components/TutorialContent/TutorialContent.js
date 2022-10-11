@@ -1,7 +1,6 @@
 import Footer from "../views/TitleFooter/Footer/Footer";
 import Like from '../Like/Like'
 import './TutorialContent.css';
-import TitleFooter from "../views/TitleFooter/TitleFooter";
 import Tips from "../Tips/Tips";
 import { TutorialData } from "../../Fixtures/Index";
 import DataManage from "../DataManage/DataManage";
@@ -13,7 +12,6 @@ const TutorialContent = () => {
         <Tips />
         <Like />
       </div>
-      <TitleFooter />
       <Footer />
     </div>
   );

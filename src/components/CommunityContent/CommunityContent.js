@@ -1,6 +1,5 @@
 import './CommunityContent.css';
 import { CommunityData } from "../../Fixtures/Index";
-import TitleFooter from "../views/TitleFooter/TitleFooter";
 import Footer from "../views/TitleFooter/Footer/Footer";
 import Like from '../Like/Like.js' ;
 import DataManage from "../DataManage/DataManage";
@@ -13,7 +12,6 @@ const CommunityContent = () => {
         <Tips/>
         <Like />
       </div>
-      <TitleFooter />
       <Footer />
     </div>
   );}
