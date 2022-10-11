@@ -5,7 +5,7 @@ import {
   footerchanles,
   footercommunity,
   footermore,
-} from "../../../Fixtures/Index";
+} from "../../Fixtures/Index";
 const Footer = () => {
   return (
     <div className="footer-bg-container">

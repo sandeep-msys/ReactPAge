@@ -1,7 +1,8 @@
 import "./DocsContent.css";
 import { DocsData } from "../../Fixtures/Index";
 import TitleFooter from "../TitleFooter/TitleFooter";
-import Footer from "../views/Footer/Footer";
+import Footer from '../Footer/Footer'
+
 import Tips from "../Tips/Tips";
 import Like from "../Like/Like";
 import DataManage from "../DataManage/DataManage";

@@ -1,4 +1,4 @@
-import Footer from '../views/Footer/Footer'
+import Footer from '../Footer/Footer'
 import Like from '../Like/Like'
 import './TutorialContent.css';
 import Tips from "../Tips/Tips";

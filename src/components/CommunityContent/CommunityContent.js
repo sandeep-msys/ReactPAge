@@ -1,6 +1,6 @@
 import './CommunityContent.css';
 import { CommunityData } from "../../Fixtures/Index";
-import Footer from '../views/Footer/Footer'
+import Footer from '../Footer/Footer'
 import Like from '../Like/Like.js' ;
 import DataManage from "../DataManage/DataManage";
 import Tips from '../Tips/Tips';
