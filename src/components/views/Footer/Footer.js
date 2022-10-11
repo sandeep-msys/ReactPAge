@@ -1,6 +1,6 @@
 import './Footer.css';
 // import {FaReact} from 'react-icons/fa';
-import  {footerDoc,footerchanles,footercommunity,footermore} from '../../../../Fixtures/Index';
+import  {footerDoc,footerchanles,footercommunity,footermore} from '../../../Fixtures/Index';
 const Footer = () => {
     return (
         <div className='footer-bg-container'>

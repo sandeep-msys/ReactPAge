@@ -11,7 +11,10 @@ function App() {
     <BrowserRouter>
       <Navbar/>
         <Switch>
-          <Route exact path='/' component = {Docs}/>
+          <Route exact path='/' component = {Docs}>
+            {/* <Route path="/Tutorial" element={<Tutorial />} />
+            <Route path="/Blog" element={<Blog/>}/> */}
+          </Route>
           <Route exact path='/Tutorial' component = {Tutorial}/>
           <Route exact path='/Blog' component={Blog}/>
           <Route exact path='/Community' component={Community}/>

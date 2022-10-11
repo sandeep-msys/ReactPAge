@@ -1,4 +1,3 @@
-// import Tips from "../views/Tips/Tips";
 import "./DataManage.css";
 const DataManage = (props) => {
   return (
@@ -7,13 +6,8 @@ const DataManage = (props) => {
         return (
           <div>
             {item.h1 ? <h1>{item.h1}</h1> : <h2>{item.h2}</h2>}
-
-            {item.pl ? (
-              <h4 className="light-colored-paragraph">{item.pl}</h4>
-            ) : null}
-            {item.pl1 ? (
-              <h4 className="light-colored-paragraph">{item.pl1}</h4>
-            ) : null}
+            {item.pl ? (<h4 className="light-colored-paragraph">{item.pl}</h4>) : null}
+            {item.pl1 ? (<h4 className="light-colored-paragraph">{item.pl1}</h4>) : null}
             {item.code ? (
               <code className="code">
                 {item.code.map((code) => (
@@ -27,13 +21,11 @@ const DataManage = (props) => {
             {item.p3 ? <p>{item.p3}</p> : null}
             {item.p4 ? <p>{item.p4}</p> : null}
             {item.p5 ? <p>{item.p5}</p> : null}
-            {item.s ? <strong>{item.s}</strong> : null}
-            {item.list
-              ? item.list.map((li) => {
+            {item.list ? item.list.map((elements) => {
                   return (
                     <ul>
                       <li>
-                        <span>{li}</span>
+                        <p>{elements}</p>
                       </li>
                     </ul>
                   );
@@ -53,6 +45,42 @@ const DataManage = (props) => {
   );
 };
 export default DataManage;
+
+
+/* {item.s ? <strong>{item.s}</strong> : null} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //  let p='React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.'
 //  let s= ['you can use as little or as much React as you need']

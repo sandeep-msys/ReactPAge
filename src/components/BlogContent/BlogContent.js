@@ -1,5 +1,5 @@
 import '../DocsContent/DocsContent.css'
-import Footer from "../views/TitleFooter/Footer/Footer";
+import Footer from '../views/Footer/Footer'
 import { BlogData } from "../../Fixtures/Index";
 import Tips from "../Tips/Tips";
 import Like from "../Like/Like";
