@@ -12,7 +12,6 @@ strong{
     font-size: 14px;
 }
 li{
-
     width: 85%;
 }
 li p{
@@ -40,4 +39,7 @@ li p{
     padding: 2% 0% 2% 6%;
     margin-top: 2%;
     margin-bottom: 2%;
+}
+.image-styles{
+    margin-left: 20%;
 }

@@ -37,6 +37,7 @@ const DataManage = (props) => {
                 <p>{item.tipparagraph}</p>
               </div>
             ) : null}
+            {item.srcfile ? <img src={item.srcfile} className='image-styles' alt='/'/> : null}
             {item.hr ? <hr /> : null}
           </div>
         );

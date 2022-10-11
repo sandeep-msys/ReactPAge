@@ -282,6 +282,10 @@ export const DocsSiderData = [
   },
 ];
 
+
+
+
+
 export const BlogData = [
   {
     h1: "React Labs: What We've Been Working On – June 2022",
@@ -366,6 +370,10 @@ export const BlogSiderData = [
   },
 ];
 
+
+
+
+
 export const TutorialData = [
   {
     h2: "Before We Start the Tutorial",
@@ -422,35 +430,35 @@ export const TutorialData = [
     h2: "What Is React?",
     p: "React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.",
     p1: "React has a few different kinds of components, but we’ll start with React.Component subclasses:",
-    code : [
-      'class ShoppingList extends React.Component {',
-      '   render() {',
-      '       return (',
+    code: [
+      "class ShoppingList extends React.Component {",
+      "   render() {",
+      "       return (",
       '            <div className="shopping-list">',
-      '                <h1>Shopping List for {this.props.name}</h1>',
-      '                <ul>',
-      '                <li>Instagram</li>',
-      '                <li>WhatsApp</li>',
-      '                <li>Oculus</li>',
-      '                </ul>',
-      '            </div>',
-      '        );',
-      '    }',
-      '}',
+      "                <h1>Shopping List for {this.props.name}</h1>",
+      "                <ul>",
+      "                <li>Instagram</li>",
+      "                <li>WhatsApp</li>",
+      "                <li>Oculus</li>",
+      "                </ul>",
+      "            </div>",
+      "        );",
+      "    }",
+      "}",
 
       '// Example usage: <ShoppingList name="Mark" />',
-  ],  
+    ],
   },
   {
     p: "We’ll get to the funny XML-like tags soon. We use components to tell React what we want to see on the screen. When our data changes, React will efficiently update and re-render our components.",
     p1: "Here, ShoppingList is a React component class, or React component type. A component takes in parameters, called props (short for “properties”), and returns a hierarchy of views to display via the render method.",
     p2: "The render method returns a description of what you want to see on the screen. React takes the description and displays the result. In particular, render returns a React element, which is a lightweight description of what to render. Most React developers use a special syntax called “JSX” which makes these structures easier to write. The <div /> syntax is transformed at build time to React.createElement('div'). The example above is equivalent to:",
-    code : [
+    code: [
       'return React.createElement("div", {className: "shopping-list"}',
       '   React.createElement("h1", /* ... h1 children ... */)',
       '   React.createElement("ul", /* ... ul children ... */)',
-      ');'
-  ],
+      ");",
+    ],
   },
   {
     p: "See full expanded version.",
@@ -470,52 +478,54 @@ export const TutorialData = [
     h2: "Passing Data Through Props",
     p: "To get our feet wet, let’s try passing some data from our Board component to our Square component.We strongly recommend typing code by hand as you’re working through the tutorial and not using copy/paste. This will help you develop muscle memory and a stronger understanding.",
     p1: "In Board’s renderSquare method, change the code to pass a prop called value to the Square:",
+    srcfile:
+      "https://reactjs.org/static/1566a4f8490d6b4b1ed36cd2c11fe4b6/6a91e/tictac-empty.png",
     code: [
-      'class Board extends React.Component {',
-      '   renderSquare(i) {',
-      '       return <Square value={i} />;',
-      '   }',
-      '}'
-  ],
+      "class Board extends React.Component {",
+      "   renderSquare(i) {",
+      "       return <Square value={i} />;",
+      "   }",
+      "}",
+    ],
     p2: "Change Square’s render method to show that value by replacing {/* TODO */} with {this.props.value}:",
-    
   },
   {
-    code : [
-      'class Square extends React.Component {',
-      '   render() {',
-      '       return (',
+    srcfile:
+      "https://reactjs.org/static/685df774da6da48f451356f33f4be8b2/01bf6/tictac-numbers.png",
+    code: [
+      "class Square extends React.Component {",
+      "   render() {",
+      "       return (",
       '           <button className="square">',
-      '               {this.props.value}',
-      '           </button>',
-      '       );',
-      '   }',
-      '}'
-  ],
+      "               {this.props.value}",
+      "           </button>",
+      "       );",
+      "   }",
+      "}",
+    ],
     h2: "View the full code at this point",
     p: "Congratulations! You’ve just “passed a prop” from a parent Board component to a child Square component. Passing props is how information flows in React apps, from parents to children.",
   },
   {
     h2: "Making an Interactive Component",
     p: "Let’s fill the Square component with an “X” when we click it. First, change the button tag that is returned from the Square component’s render() function to this:",
-    code : [
-      'class Square extends React.Component {',
-      '   render() {',
-      '       return (',
+    code: [
+      "class Square extends React.Component {",
+      "   render() {",
+      "       return (",
       '           <button className="square" onClick={function() { console.log("click"); }}>',
-      '               {this.props.value}',
-      '           </button>',
-      '       );',
-      '   }',
-      '}'
-  ],
+      "               {this.props.value}",
+      "           </button>",
+      "       );",
+      "   }",
+      "}",
+    ],
     p1: "If you click on a Square now, you should see ‘click’ in your browser’s devtools console.",
     tiptitle: "Note",
     tipparagraph:
       'To save typing and avoid the confusing behavior of this, we will use the arrow function syntax for event handlers here and further below Notice how with onClick={() => console.log("click")}, we’re passing a function as the onClick prop. React will only call this function after a click. Forgetting () => and writing onClick={console.log("click")} is a common mistake, and would fire every time the component re-renders.',
     p2: "As a next step, we want the Square component to “remember” that it got clicked, and fill it with an “X” mark. To “remember” things, components use state.React components can have state by setting this.state in their constructors. this.state should be considered as private to a React component that it’s defined in. Let’s store the current value of the Square in this.state, and change it when the Square is clicked.",
     p3: "First, we’ll add a constructor to the class to initialize the state:",
-    
     p4: "Now we’ll change the Square’s render method to display the current state’s value when clicked:",
     list: [
       "Replace this.props.value with this.state.value inside the <button> tag.",
@@ -523,52 +533,51 @@ export const TutorialData = [
       "Put the className and onClick props on separate lines for better readability.",
     ],
     p5: "After these changes, the <button> tag that is returned by the Square’s render method looks like this:",
-    
   },
   {
-    code : [
-      'class Square extends React.Component {',
-      '   constructor(props) {',
-      '       super(props);',
-      '       this.state = {',
-      '           value: null,',
-      '       };',
-      '   }',
-      '   render() {',
-      '       return (',
+    code: [
+      "class Square extends React.Component {",
+      "   constructor(props) {",
+      "       super(props);",
+      "       this.state = {",
+      "           value: null,",
+      "       };",
+      "   }",
+      "   render() {",
+      "       return (",
       '           <button className="square" onClick={() => console.log("click")}>',
-      '               {this.props.value}',
-      '           </button>',
-      '       );',
-      '   }',
-      '}'
-  ],
+      "               {this.props.value}",
+      "           </button>",
+      "       );",
+      "   }",
+      "}",
+    ],
     tiptitle: "Note",
     tipparagraph:
       "In JavaScript classes, you need to always call super when defining the constructor of a subclass. All React component classes that have a constructor should start with a super(props) call.",
     p: "By calling this.setState from an onClick handler in the Square’s render method, we tell React to re-render that Square whenever its <button> is clicked. After the update, the Square’s this.state.value will be 'X', so we’ll see the X on the game board. If you click on any Square, an X should show up.When you call setState in a component, React automatically updates the child components inside of it too.",
   },
   {
-    code : [
-      'class Square extends React.Component {',
-      '   constructor(props) {',
-      '       super(props);',
-      '       this.state = {',
-      '           value: null',
-      '       };',
-      '   }',
-      '   render() {',
-      '       return (',
-      '           <button',
+    code: [
+      "class Square extends React.Component {",
+      "   constructor(props) {",
+      "       super(props);",
+      "       this.state = {",
+      "           value: null",
+      "       };",
+      "   }",
+      "   render() {",
+      "       return (",
+      "           <button",
       '               className="square"',
       '               onClick={() => this.setState({value: "X"})}',
-      '           >',
-      '               {this.state.value}',
-      '           </button>',
-      '       );',
-      '   }',
-      '}'
-  ],
+      "           >",
+      "               {this.state.value}",
+      "           </button>",
+      "       );",
+      "   }",
+      "}",
+    ],
     h2: "Developer Tools",
     p: "The React Devtools extension for Chrome and Firefox lets you inspect a React component tree with your browser’s developer tools.",
     p1: "The React DevTools let you check the props and the state of your React components.After installing React DevTools, you can right-click on any element on the page, click “Inspect” to open the developer tools, and the React tabs (“⚛️ Components” and “⚛️ Profiler”) will appear as the last tabs to the right. Use “⚛️ Components” to inspect the component tree.",
@@ -591,29 +600,29 @@ export const TutorialData = [
     s: "To collect data from multiple children, or to have two child components communicate with each other, you need to declare the shared state in their parent component instead. The parent component can pass the state back down to the children by using props; this keeps the child components in sync with each other and with the parent component.",
     p1: "Lifting state into a parent component is common when React components are refactored — let’s take this opportunity to try it out.",
     p2: "Add a constructor to the Board and set the Board’s initial state to contain an array of 9 nulls corresponding to the 9 squares:",
-    code : [
-      'class Board extends React.Component {',
-      '   constructor(props) {',
-      '       super(props);',
-      '       this.state = {',
-      '           squares: Array(9).fill(null),',
-      '       };',
-      '   }',
-      '   renderSquare(i) {',
-      '       return <Square value={i} />;',
-      '   }',
-  ],
+    code: [
+      "class Board extends React.Component {",
+      "   constructor(props) {",
+      "       super(props);",
+      "       this.state = {",
+      "           squares: Array(9).fill(null),",
+      "       };",
+      "   }",
+      "   renderSquare(i) {",
+      "       return <Square value={i} />;",
+      "   }",
+    ],
     p3: "When we fill the board in later, the this.state.squares array will look something like this:",
     p4: "The Board’s renderSquare method currently looks like this:",
   },
   {
-    code : [
-      '[',
+    code: [
+      "[",
       '   "O", null, "X",',
       '   "X", "X", "O",,',
       '   "O", null, null,',
-      ']'
-  ],
+      "]",
+    ],
     p: "In the beginning, we passed the value prop down from the Board to show numbers from 0 to 8 in every Square. In a different previous step, we replaced the numbers with an “X” mark determined by Square’s own state. This is why Square currently ignores the value prop passed to it by the Board.",
     p1: "We will now use the prop passing mechanism again. We will modify the Board to instruct each individual Square about its current value ('X', 'O', or null). We have already defined the squares array in the Board’s constructor, and we will modify the Board’s renderSquare method to read from it:",
     p2: "Each Square will now receive a value prop that will either be 'X', 'O', or null for empty squares.",
@@ -630,19 +639,18 @@ export const TutorialData = [
 
       "Delete the constructor from Square because Square no longer keeps track of the game’s state",
     ],
-    
   },
   {
-    code : [
-      'renderSquare(i) {',
-      '   return (',
-      '       <Square',
-      '           value={this.state.squares[i]}',
-      '           onClick={() => this.handleClick(i)}',
-      '       />',
-      '   );',
-      '}'
-  ],
+    code: [
+      "renderSquare(i) {",
+      "   return (",
+      "       <Square",
+      "           value={this.state.squares[i]}",
+      "           onClick={() => this.handleClick(i)}",
+      "       />",
+      "   );",
+      "}",
+    ],
     p: "After these changes, the Square component looks like this:",
     p1: "When a Square is clicked, the onClick function provided by the Board is called. Here’s a review of how this is achieved:",
     list: [
@@ -656,7 +664,7 @@ export const TutorialData = [
 
       "We have not defined the handleClick() method yet, so our code crashes. If you click a square now, you should see a red error screen saying something like “this.handleClick is not a function”.",
     ],
-    
+
     tiptitle: "Note",
     tipparagraph:
       "The DOM <button> element’s onClick attribute has a special meaning to React because it is a built-in component. For custom components like Square, the naming is up to you. We could give any name to the Square’s onClick prop or Board’s handleClick method, and the code would work the same. In React, it’s conventional to use on[Event] names for props which represent events and handle[Event] for the methods which handle the events.",
@@ -667,19 +675,19 @@ export const TutorialData = [
   },
   {
     code: [
-      'class Square extends React.Component {',
-      '   render() {',
-      '       return (',
-      '           <button',
+      "class Square extends React.Component {",
+      "   render() {",
+      "       return (",
+      "           <button",
       '               className="square"',
-      '               onClick={() => this.props.onClick()}',
-      '           >',
-      '               {this.props.value}',
-      '           </button>',
-      '       );',
-      '   }',
-      '}'
-  ],
+      "               onClick={() => this.props.onClick()}",
+      "           >",
+      "               {this.props.value}",
+      "           </button>",
+      "       );",
+      "   }",
+      "}",
+    ],
     h2: "Why Immutability Is Important",
     p: "In the previous code example, we suggested that you create a copy of the squares array using the slice() method instead of modifying the existing array. We’ll now discuss immutability and why immutability is important to learn.",
     p1: "There are generally two approaches to changing data. The first approach is to mutate the data by directly changing the data’s values. The second approach is to replace the data with a new copy which has the desired changes.",
@@ -755,57 +763,57 @@ export const TutorialData = [
     tiptitle: "Note",
     tipparagraph:
       "Unlike the array push() method you might be more familiar with, the concat() method doesn’t mutate the original array, so we prefer it.",
-      code : [
-        "class Board extends React.Component {",
-        "   constructor(props) {",
-        "       super(props);",
-        "       this.state = {",
-        "           squares: Array(9).fill(null),",
-        "           xIsNext: true,",
-        "       };",
-        "   }",
-        "   handleClick(i) {",
-        "       const squares = this.state.squares.slice();",
-        "       squares[i] = this.state.xIsNext ? 'X' : 'O';",
-        "       this.setState({",
-        "           squares: squares,",
-        "           xIsNext: !this.state.xIsNext,",
-        "       });",
-        "   }",
-        "   renderSquare(i) {",
-        "       return (",
-        "           <Square",
-        "               value={this.state.squares[i]}",
-        "               onClick={() => this.handleClick(i)}",
-        "           />",
-        "       );",
-        "   );",
-        "   render() {",
-        "       const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');",
-        "       return (",
-        "           <div>",
-        '               <div className="status">{status}</div>',
-        '               <div className="board-row">',
-        '                   {this.renderSquare(0)}',
-        '                   {this.renderSquare(1)}',
-        '                   {this.renderSquare(2)}',
-        '               </div>',
-        '               <div className="board-row">',
-        '                   {this.renderSquare(3)}',
-        '                   {this.renderSquare(4)}',
-        '                   {this.renderSquare(5)}',
-        '               </div>',
-        '               <div className="board-row">',
-        '                   {this.renderSquare(6)}',
-        '                   {this.renderSquare(7)}',
-        '                   {this.renderSquare(8)}',
-        '               </div>',
-        '           </div>',
-        '       );',
-        '   }',
-        '}'
+    code: [
+      "class Board extends React.Component {",
+      "   constructor(props) {",
+      "       super(props);",
+      "       this.state = {",
+      "           squares: Array(9).fill(null),",
+      "           xIsNext: true,",
+      "       };",
+      "   }",
+      "   handleClick(i) {",
+      "       const squares = this.state.squares.slice();",
+      "       squares[i] = this.state.xIsNext ? 'X' : 'O';",
+      "       this.setState({",
+      "           squares: squares,",
+      "           xIsNext: !this.state.xIsNext,",
+      "       });",
+      "   }",
+      "   renderSquare(i) {",
+      "       return (",
+      "           <Square",
+      "               value={this.state.squares[i]}",
+      "               onClick={() => this.handleClick(i)}",
+      "           />",
+      "       );",
+      "   );",
+      "   render() {",
+      "       const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');",
+      "       return (",
+      "           <div>",
+      '               <div className="status">{status}</div>',
+      '               <div className="board-row">',
+      "                   {this.renderSquare(0)}",
+      "                   {this.renderSquare(1)}",
+      "                   {this.renderSquare(2)}",
+      "               </div>",
+      '               <div className="board-row">',
+      "                   {this.renderSquare(3)}",
+      "                   {this.renderSquare(4)}",
+      "                   {this.renderSquare(5)}",
+      "               </div>",
+      '               <div className="board-row">',
+      "                   {this.renderSquare(6)}",
+      "                   {this.renderSquare(7)}",
+      "                   {this.renderSquare(8)}",
+      "               </div>",
+      "           </div>",
+      "       );",
+      "   }",
+      "}",
     ],
-    },
+  },
   {
     h2: "Showing the Past Moves",
     p: "Since we are recording the tic-tac-toe game’s history, we can now display it to the player as a list of past moves.",
@@ -852,27 +860,27 @@ export const TutorialData = [
     p2: "after a new one has been made.We will also replace reading this.state.history with this.state.history.slice(0, this.state.stepNumber + 1). This ensures that if we “go back in time” and then make a new move from that point, we throw away all the “future” history that would now be incorrect.",
     p3: "Finally, we will modify the Game component’s render method from always rendering the last move to rendering the currently selected move according to stepNumber:",
     p4: "If we click on any step in the game’s history, the tic-tac-toe board should immediately update to show what the board looked like after that step occurred.",
-    code : [
-      'function calculateWinner(squares) {',
-      '   const lines = [',
-      '       [0, 1, 2],',
-      '       [3, 4, 5],',
-      '       [6, 7, 8],',
-      '       [0, 3, 6],',
-      '       [1, 4, 7],',
-      '       [2, 5, 8],',
-      '       [0, 4, 8],',
-      '       [2, 4, 6],',
-      '   ];',
-      '   for (let i = 0; i < lines.length; i++) {',
-      '       const [a, b, c] = lines[i];',
-      '       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {',
-      '           return squares[a];',
-      '       }',
-      '   }',
-      '   return null;',
-      '}'
-  ],
+    code: [
+      "function calculateWinner(squares) {",
+      "   const lines = [",
+      "       [0, 1, 2],",
+      "       [3, 4, 5],",
+      "       [6, 7, 8],",
+      "       [0, 3, 6],",
+      "       [1, 4, 7],",
+      "       [2, 5, 8],",
+      "       [0, 4, 8],",
+      "       [2, 4, 6],",
+      "   ];",
+      "   for (let i = 0; i < lines.length; i++) {",
+      "       const [a, b, c] = lines[i];",
+      "       if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {",
+      "           return squares[a];",
+      "       }",
+      "   }",
+      "   return null;",
+      "}",
+    ],
   },
   {
     h2: "Wrapping Up",
@@ -947,6 +955,10 @@ export const TutorialSiderData = [
   },
 ];
 
+
+
+
+
 export const CommunityData = [
   {
     h1: "Where To Get Support",
@@ -995,103 +1007,117 @@ export const CommunitySiderData = [
   },
 ];
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export const footerDoc = [
   {
-    anchore: "#",
-    titel: "Installation",
+    anchor: "#",
+    title: "Installation",
   },
   {
-    anchore: "#",
-    titel: "Main Concepts",
+    anchor: "#",
+    title: "Main Concepts",
   },
   {
-    anchore: "#",
-    titel: " Advanced Guides",
+    anchor: "#",
+    title: " Advanced Guides",
   },
   {
-    anchore: "#",
-    titel: "FAQ",
+    anchor: "#",
+    title: "FAQ",
   },
   {
-    anchore: "#",
-    titel: " Hooks",
+    anchor: "#",
+    title: " Hooks",
   },
   {
-    anchore: "#",
-    titel: "Testing",
+    anchor: "#",
+    title: "Testing",
   },
   {
-    anchore: "#",
-    titel: "Contributing",
+    anchor: "#",
+    title: "Contributing",
   },
   {
-    anchore: "#",
-    titel: "FAQ",
+    anchor: "#",
+    title: "FAQ",
   },
 ];
 export const footerchanles = [
   {
-    anchore: "#",
-    titel: "GitHub",
+    anchor: "#",
+    title: "GitHub",
   },
   {
-    anchore: "#",
-    titel: "Stack Overflow",
+    anchor: "#",
+    title: "Stack Overflow",
   },
   {
-    anchore: "#",
-    titel: "Discussion Forums",
+    anchor: "#",
+    title: "Discussion Forums",
   },
   {
-    anchore: "#",
-    titel: "Reactiflux Chat",
+    anchor: "#",
+    title: "Reactiflux Chat",
   },
   {
-    anchore: "#",
-    titel: "DEV Community",
+    anchor: "#",
+    title: "DEV Community",
   },
   {
-    anchore: "#",
-    titel: "Facebook",
+    anchor: "#",
+    title: "Facebook",
   },
   {
-    anchore: "#",
-    titel: "Twitter",
+    anchor: "#",
+    title: "Twitter",
   },
 ];
 export const footermore = [
   {
-    anchore: "#",
-    titel: "Tutorial",
+    anchor: "#",
+    title: "Tutorial",
   },
   {
-    anchore: "#",
-    titel: "Blog",
+    anchor: "#",
+    title: "Blog",
   },
   {
-    anchore: "#",
-    titel: "Acknowledgements",
+    anchor: "#",
+    title: "Acknowledgements",
   },
   {
-    anchore: "#",
-    titel: "React Native",
+    anchor: "#",
+    title: "React Native",
   },
   {
-    anchore: "#",
-    titel: "Privacy",
+    anchor: "#",
+    title: "Privacy",
   },
   {
-    anchore: "#",
-    titel: "Terms",
+    anchor: "#",
+    title: "Terms",
   },
 ];
 export const footercommunity = [
   {
-    anchore: "#",
-    titel: "Code of Conduct",
+    anchor: "#",
+    title: "Code of Conduct",
   },
   {
-    anchore: "#",
-    titel: "Community Resources",
+    anchor: "#",
+    title: "Community Resources",
   },
 ];
