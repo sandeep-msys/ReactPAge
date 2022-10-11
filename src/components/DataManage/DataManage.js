@@ -14,7 +14,13 @@ const DataManage = (props) => {
             {item.pl1 ? (
               <h4 className="light-colored-paragraph">{item.pl1}</h4>
             ) : null}
-
+            {item.code ? (
+              <code className="code">
+                {item.code.map((code) => (
+                  <pre>{code}</pre>
+                ))}
+              </code>
+            ) : null}
             {item.p ? <p>{item.p}</p> : null}
             {item.p1 ? <p>{item.p1}</p> : null}
             {item.p2 ? <p>{item.p2}</p> : null}
