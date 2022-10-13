@@ -175,19 +175,21 @@ export const DocsSiderData = [
   {
     title: "INSTALLATION",
     content: [
-      "Getting Started",
-      "Add React to a Website",
-      "Create a New React App",
-      "CDN Links",
-      "Release Channels",
+      { link: "/GettingStarted", title: "Getting Started" },
+      { link: "/Add-React-to-a-Website", title: "Add React to a Website" },
+      { link: "/Create-a-New-React-App", title: "Create a New React App" },
+      { link: "/CDN-Links", title: "CDN Links" },
+      { link: "/Release-Channels", title: "Release Channels" },
     ],
   },
   {
     title: "MAIN CONCEPTS",
     content: [
-      "Hello World",
-      "Introducing JSX",
-      "Rendering Elements",
+      { link:'HelloWorld', title:"Hello World"},
+      {link:'Introducing-JSX',title:'Introducing JSX'},
+      {link:"Rendering-Elements",title:'Rendering Elements'},
+      
+      
       "Components and Props",
       "State and Lifecycle",
       "Handling Events",
@@ -199,92 +201,88 @@ export const DocsSiderData = [
       "Thinking In React",
     ],
   },
-  {
-    title: "ADVANCED GUIDES",
-    content: [
-      "Accessibility",
-      "Code-Splitting",
-      "Context",
-      "Error Boundaries",
-      "Forwarding Refs",
-      "Fragments",
-      "Higher-Order Components",
-      "Integrating with Other Libraries",
-      "JSX In Depth",
-      "Optimizing Performance",
-      "Portals",
-      "Profiler",
-      "React Without ES6",
-      "React Without JSX",
-      "Reconciliation",
-      "Refs and the DOM",
-      "Render Props",
-      "Static Type Checking",
-      "Strict Mode",
-      "Typechecking With PropTypes",
-      "Uncontrolled Components",
-      "Web Components",
-    ],
-  },
-  {
-    title: "API REFERENCES",
-    content: [
-      "React",
-      "React.Component",
-      "ReactDOM",
-      "ReactDOMClient",
-      "ReactDOMServer",
-      "DOM Elements",
-      "SyntheticEvent",
-      "Test Utilities",
-      "Test Renderer",
-      "JS Environment Requirements",
-      "Glossary",
-    ],
-  },
-  {
-    title: "HOOKS",
-    content: [
-      "Introducing Hooks",
-      "Hooks at a Glance",
-      "Using the State Hook",
-      "Using the Effect Hook",
-      "Rules of Hooks",
-      "Building Your Own Hooks",
-      "Hooks API Reference",
-      "Hooks FAQ",
-    ],
-  },
-  {
-    title: "TESTING",
-    content: ["Testing Overview", "Testing Recipes", "Testing Environments"],
-  },
-  {
-    title: "CONTRIBUTING",
-    content: [
-      "How to Contribute",
-      "Codebase Overview",
-      "Implementation Notes",
-      "Design Principles",
-    ],
-  },
-  {
-    title: "FAQ",
-    content: [
-      "AJAX and APIs",
-      "Babel, JSX, and Build Steps",
-      "Passing Functions to Components",
-      "Component State",
-      "Styling and CSS",
-      "File Structure",
-      "Versioning Policy",
-    ],
-  },
+  // {
+  //   title: "ADVANCED GUIDES",
+  //   content: [
+  //     "Accessibility",
+  //     "Code-Splitting",
+  //     "Context",
+  //     "Error Boundaries",
+  //     "Forwarding Refs",
+  //     "Fragments",
+  //     "Higher-Order Components",
+  //     "Integrating with Other Libraries",
+  //     "JSX In Depth",
+  //     "Optimizing Performance",
+  //     "Portals",
+  //     "Profiler",
+  //     "React Without ES6",
+  //     "React Without JSX",
+  //     "Reconciliation",
+  //     "Refs and the DOM",
+  //     "Render Props",
+  //     "Static Type Checking",
+  //     "Strict Mode",
+  //     "Typechecking With PropTypes",
+  //     "Uncontrolled Components",
+  //     "Web Components",
+  //   ],
+  // },
+  // {
+  //   title: "API REFERENCES",
+  //   content: [
+  //     "React",
+  //     "React.Component",
+  //     "ReactDOM",
+  //     "ReactDOMClient",
+  //     "ReactDOMServer",
+  //     "DOM Elements",
+  //     "SyntheticEvent",
+  //     "Test Utilities",
+  //     "Test Renderer",
+  //     "JS Environment Requirements",
+  //     "Glossary",
+  //   ],
+  // },
+  // {
+  //   title: "HOOKS",
+  //   content: [
+  //     "Introducing Hooks",
+  //     "Hooks at a Glance",
+  //     "Using the State Hook",
+  //     "Using the Effect Hook",
+  //     "Rules of Hooks",
+  //     "Building Your Own Hooks",
+  //     "Hooks API Reference",
+  //     "Hooks FAQ",
+  //   ],
+  // },
+  // {
+  //   title: "TESTING",
+  //   content: ["Testing Overview", "Testing Recipes", "Testing Environments"],
+  // },
+  // {
+  //   title: "CONTRIBUTING",
+  //   content: [
+  //     "How to Contribute",
+  //     "Codebase Overview",
+  //     "Implementation Notes",
+  //     "Design Principles",
+  //   ],
+  // },
+  // {
+  //   title: "FAQ",
+  //   content: [
+  //     "AJAX and APIs",
+  //     "Babel, JSX, and Build Steps",
+  //     "Passing Functions to Components",
+  //     "Component State",
+  //     "Styling and CSS",
+  //     "File Structure",
+  //     "Versioning Policy",
+  //   ],
+  // },
 ];
-
-
-
-
 
 export const BlogData = [
   {
@@ -369,10 +367,6 @@ export const BlogSiderData = [
     ],
   },
 ];
-
-
-
-
 
 export const TutorialData = [
   {
@@ -955,10 +949,6 @@ export const TutorialSiderData = [
   },
 ];
 
-
-
-
-
 export const CommunityData = [
   {
     h1: "Where To Get Support",
@@ -1006,20 +996,6 @@ export const CommunitySiderData = [
     ],
   },
 ];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export const footerDoc = [
   {

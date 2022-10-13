@@ -18,11 +18,12 @@
 .accordion-list{
     font-weight: 550;
     text-decoration: none;
-    color: rgb(99, 95, 75);
+    color: grey;
+    
     text-decoration-line: none;
     font-size: 11px;
 }
 .accordion-list:hover{
     cursor: pointer;
-    color: grey;
+    color: rgb(99, 95, 75);
 }

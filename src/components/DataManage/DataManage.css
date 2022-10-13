@@ -14,7 +14,7 @@ strong{
 li{
     width: 85%;
 }
-li p{
+li span{
     line-height: 1;
     font-size: 13px;
     font-weight: 400;

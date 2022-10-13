@@ -25,7 +25,7 @@ const DataManage = (props) => {
                   return (
                     <ul>
                       <li>
-                        <p>{elements}</p>
+                        <span>{elements}</span>
                       </li>
                     </ul>
                   );

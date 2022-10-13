@@ -1,18 +1,15 @@
 import "./DocsContent.css";
 import { DocsData } from "../../Fixtures/Index";
 import TitleFooter from "../TitleFooter/TitleFooter";
-import Footer from '../Footer/Footer'
-
+import Footer from '../Footer/Footer';
 import Tips from "../Tips/Tips";
 import Like from "../Like/Like";
 import DataManage from "../DataManage/DataManage";
-// import { Link } from 'react-router-dom'
+
 const DocsContent = () => {
   return (
     <div className="Docs-Main-container">
       <div className="docs-Content-container">
-        {/* <Link to="/Blog">Blog</Link>
-        <Link to="/Tuorial">Tutorial</Link> */}
         <DataManage data={DocsData} />
         <Tips />
         <Like />
@@ -23,19 +20,6 @@ const DocsContent = () => {
   );
 };
 export default DocsContent;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //  {DocsData.map((item) =>
